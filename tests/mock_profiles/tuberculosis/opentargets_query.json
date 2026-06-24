@@ -1,0 +1,21 @@
+{
+  "data": {
+    "disease": {
+      "name": "Tuberculosis",
+      "associatedTargets": {
+        "rows": [
+          {
+            "target": {
+              "approvedSymbol": "inhA",
+              "id": "ENSG00000167642",
+              "uniprotIds": [
+                "P9WGR1"
+              ]
+            },
+            "score": 0.95
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "gene_symbol": "CFTR",
+    "ensembl_id": "ENSG00000001626",
+    "uniprot_id": "P13569",
+    "association_score": 0.8847,
+    "structure_path": "C:/Users/kcwp264.DS/teamwork_projects/admet_repurposing_engine/data/structures/P13569.pdb"
+  }
+]

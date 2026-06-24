@@ -1,0 +1,24 @@
+[chem_screen] Starting chemical screening. Mock mode: True
+[chem_screen] Querying mock ChEMBL API status at http://127.0.0.1:9013/chembl/api/data/status
+[chem_screen] Querying mock ChEMBL API activities at http://127.0.0.1:9013/chembl/api/data/activity
+[chem_screen] Retrieved 5 activities from mock ChEMBL API.
+[chem_screen] Writing 5 compounds to C:\Users\kcwp264.DS\teamwork_projects\admet_repurposing_engine\tests\output\tc_t1_pipeline_integration_3_1782297716417_58804\chem_screen_output.csv...
+[chem_screen] Screening completed successfully.
+No normalization for SPS. Feature removed!
+No normalization for AvgIpc. Feature removed!
+No normalization for NumAmideBonds. Feature removed!
+No normalization for NumAtomStereoCenters. Feature removed!
+No normalization for NumBridgeheadAtoms. Feature removed!
+No normalization for NumHeterocycles. Feature removed!
+No normalization for NumSpiroAtoms. Feature removed!
+No normalization for NumUnspecifiedAtomStereoCenters. Feature removed!
+No normalization for Phi. Feature removed!
+Skipped loading some Tensorflow models, missing a dependency. No module named 'tensorflow'
+Skipped loading modules with pytorch-geometric dependency, missing a dependency. No module named 'torch_geometric'
+Skipped loading modules with transformers dependency. No module named 'transformers.models.roberta.tokenization_roberta_fast'
+cannot import name 'Chemberta' from 'deepchem.models.torch_models' (C:\Users\kcwp264.DS\miniconda3\envs\sci_chem\lib\site-packages\deepchem\models\torch_models\__init__.py)
+Skipped loading modules with pytorch-geometric dependency, missing a dependency. cannot import name 'DMPNN' from 'deepchem.models.torch_models' (C:\Users\kcwp264.DS\miniconda3\envs\sci_chem\lib\site-packages\deepchem\models\torch_models\__init__.py)
+Skipped loading modules with pytorch-lightning dependency, missing a dependency. No module named 'lightning'
+Skipped loading some Jax models, missing a dependency. No module named 'jax'
+Skipped loading some PyTorch models, missing a dependency. No module named 'tensorflow'
+[DGL Warning] Graphbolt C++ library could not be loaded: Cannot find DGL C++ graphbolt library at C:\Users\kcwp264.DS\miniconda3\envs\sci_chem\lib\site-packages\dgl\graphbolt\graphbolt_pytorch_2.6.0.dll

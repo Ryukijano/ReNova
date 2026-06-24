@@ -1,0 +1,10 @@
+{
+  "data": {
+    "disease": {
+      "name": "Empty Disease",
+      "associatedTargets": {
+        "rows": []
+      }
+    }
+  }
+}

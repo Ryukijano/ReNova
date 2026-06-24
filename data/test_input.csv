@@ -1,0 +1,4 @@
+gene_symbol,uniprot_id,compound_id,smiles,relation,value,units
+CFTR,P13569,CHEMBL25,CC(=O)Oc1ccccc1C(=O)O,=,10.0,nM
+CFTR,P13569,CHEMBL113,CN1C=NC2=C1C(=O)N(C(=O)N2C)C,=,25.0,nM
+CFTR,P13569,CHEMBL545,CCO,=,5.0,nM

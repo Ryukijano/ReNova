@@ -1,0 +1,21 @@
+{
+  "data": {
+    "disease": {
+      "name": "Malaria",
+      "associatedTargets": {
+        "rows": [
+          {
+            "target": {
+              "approvedSymbol": "DHFR",
+              "id": "ENSG00000228716",
+              "uniprotIds": [
+                "P00374"
+              ]
+            },
+            "score": 0.95
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "tc_t4_cystic_fibrosis",
+  "name": "Tier 4 - Real-World Scenario: Cystic Fibrosis",
+  "description": "Validates full end-to-end drug repurposing pipeline scenario for Cystic Fibrosis using mock database.",
+  "tier": 4,
+  "milestone": "M6",
+  "feature": "pipeline_integration",
+  "input": {
+    "disease": "Cystic Fibrosis",
+    "args": {
+      "--output-dir": "tests/output/tc_t4_cystic_fibrosis",
+      "--mock": "true"
+    },
+    "env": {
+      "ADMET_MOCK_PORT": "9041"
+    },
+    "mock_profile": "cystic_fibrosis"
+  },
+  "assertions": {
+    "process": {
+      "expected_exit_code": 0,
+      "timeout_seconds": 600,
+      "stdout_contains": [
+        "Pipeline started",
+        "Target identification completed",
+        "Chemical screening completed",
+        "ADMET prediction completed",
+        "Clinical checks completed",
+        "Pipeline finished successfully"
+      ],
+      "stderr_excludes": [
+        "Traceback (most recent call last):",
+        "AssertionError:"
+      ]
+    },
+    "outputs": [
+      {
+        "file_path": "tests/output/tc_t4_cystic_fibrosis/target_retriever_output.json",
+        "format": "json",
+        "json_rules": {
+          "schema_validation": true,
+          "min_items": 1
+        }
+      },
+      {
+        "file_path": "tests/output/tc_t4_cystic_fibrosis/target_retriever_output.json",
+        "format": "json",
+        "json_rules": {
+          "schema_validation": true,
+          "min_items": 1,
+          "check_file_paths_exist": "$[*].structure_path"
+        }
+      },
+      {
+        "file_path": "tests/output/tc_t4_cystic_fibrosis/chem_screen_output.csv",
+        "format": "csv",
+        "csv_rules": {
+          "required_columns": [
+            "gene_symbol",
+            "uniprot_id",
+            "compound_id",
+            "smiles",
+            "relation",
+            "value",
+            "units"
+          ],
+          "min_row_count": 1,
+          "column_validators": {
+            "gene_symbol": {
+              "type": "string"
+            },
+            "uniprot_id": {
+              "type": "string"
+            },
+            "compound_id": {
+              "type": "string"
+            },
+            "smiles": {
+              "type": "smiles"
+            },
+            "value": {
+              "type": "float",
+              "min": 0.0
+            },
+            "units": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "file_path": "tests/output/tc_t4_cystic_fibrosis/admet_predict_output.csv",
+        "format": "csv",
+        "csv_rules": {
+          "required_columns": [
+            "gene_symbol",
+            "compound_id",
+            "smiles",
+            "hcl_solubility",
+            "caco2_permeability",
+            "logp",
+            "qed",
+            "toxicity_score",
+            "admet_score"
+          ],
+          "min_row_count": 1,
+          "column_validators": {
+            "gene_symbol": {
+              "type": "string"
+            },
+            "compound_id": {
+              "type": "string"
+            },
+            "smiles": {
+              "type": "smiles"
+            },
+            "hcl_solubility": {
+              "type": "float"
+            },
+            "caco2_permeability": {
+              "type": "float"
+            },
+            "logp": {
+              "type": "float"
+            },
+            "qed": {
+              "type": "float",
+              "min": 0.0,
+              "max": 1.0
+            },
+            "toxicity_score": {
+              "type": "float"
+            },
+            "admet_score": {
+              "type": "float"
+            }
+          }
+        }
+      },
+      {
+        "file_path": "tests/output/tc_t4_cystic_fibrosis/repurposing_candidate_report.csv",
+        "format": "csv",
+        "csv_rules": {
+          "required_columns": [
+            "compound_name",
+            "compound_id",
+            "smiles",
+            "target_gene",
+            "admet_score",
+            "fda_approval_status",
+            "clinical_trials_count",
+            "adverse_events_count"
+          ],
+          "min_row_count": 1,
+          "column_validators": {
+            "compound_name": {
+              "type": "string"
+            },
+            "compound_id": {
+              "type": "string"
+            },
+            "smiles": {
+              "type": "smiles"
+            },
+            "target_gene": {
+              "type": "string"
+            },
+            "admet_score": {
+              "type": "float"
+            },
+            "fda_approval_status": {
+              "type": "string"
+            },
+            "clinical_trials_count": {
+              "type": "int",
+              "min": 0
+            },
+            "adverse_events_count": {
+              "type": "int",
+              "min": 0
+            }
+          }
+        }
+      }
+    ]
+  }
+}

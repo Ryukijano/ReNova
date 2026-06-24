@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "E2ETestCase",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the test case."
+    },
+    "name": {
+      "type": "string",
+      "description": "Short user-friendly name of the test case."
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of what the test case validates."
+    },
+    "tier": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4],
+      "description": "Test tier: 1 (CLI/Env), 2 (Mock E2E), 3 (Live Targets), 4 (Live E2E)"
+    },
+    "milestone": {
+      "type": "string",
+      "enum": ["M2", "M3", "M4", "M5", "M6"],
+      "description": "Milestone this test case belongs to (incremental testing)."
+    },
+    "feature": {
+      "type": "string",
+      "enum": [
+        "target_identification",
+        "structure_retrieval",
+        "chem_screening",
+        "admet_prediction",
+        "clinical_check",
+        "pipeline_integration"
+      ],
+      "description": "The specific pipeline step or feature this test case focuses on."
+    },
+    "input": {
+      "type": "object",
+      "properties": {
+        "disease": {
+          "type": "string",
+          "description": "Disease name to pass as input to the pipeline."
+        },
+        "args": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "CLI arguments and options for run_pipeline.py."
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Environment variables to set before spawning the pipeline."
+        },
+        "mock_profile": {
+          "type": "string",
+          "description": "Name of the mock profile directory containing API responses."
+        }
+      },
+      "required": ["disease"]
+    },
+    "assertions": {
+      "type": "object",
+      "properties": {
+        "process": {
+          "type": "object",
+          "properties": {
+            "expected_exit_code": {
+              "type": "integer",
+              "default": 0
+            },
+            "timeout_seconds": {
+              "type": "integer",
+              "default": 600,
+              "description": "Max execution time. Default 600s due to slow Windows import times."
+            },
+            "stdout_contains": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Substring or regex patterns that must appear in stdout."
+            },
+            "stderr_excludes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Substring or regex patterns that must NOT appear in stderr (e.g. tracebacks)."
+            }
+          },
+          "required": ["expected_exit_code"]
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "file_path": {
+                "type": "string",
+                "description": "Path to the expected output file relative to workspace."
+              },
+              "format": {
+                "type": "string",
+                "enum": ["json", "csv"]
+              },
+              "min_size_bytes": {
+                "type": "integer",
+                "default": 1
+              },
+              "json_rules": {
+                "type": "object",
+                "properties": {
+                  "schema_validation": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "If true, validate against the predefined target JSON schema."
+                  },
+                  "min_items": {
+                    "type": "integer"
+                  },
+                  "max_items": {
+                    "type": "integer"
+                  },
+                  "check_file_paths_exist": {
+                    "type": "string",
+                    "description": "JSONPath pointing to file paths in the JSON that must exist on disk (e.g. $.list[*].structure_path)."
+                  }
+                }
+              },
+              "csv_rules": {
+                "type": "object",
+                "properties": {
+                  "required_columns": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "exact_row_count": {
+                    "type": "integer"
+                  },
+                  "min_row_count": {
+                    "type": "integer"
+                  },
+                  "max_row_count": {
+                    "type": "integer"
+                  },
+                  "column_validators": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": ["string", "int", "float", "smiles"]
+                        },
+                        "min": {
+                          "type": "number"
+                        },
+                        "max": {
+                          "type": "number"
+                        },
+                        "regex": {
+                          "type": "string",
+                          "description": "Regex pattern the column value must match."
+                        },
+                        "allowed_values": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "required": ["type"]
+                    }
+                  }
+                },
+                "required": ["required_columns"]
+              }
+            },
+            "required": ["file_path", "format"]
+          }
+        }
+      },
+      "required": ["process"]
+    }
+  },
+  "required": ["id", "name", "tier", "milestone", "feature", "input", "assertions"]
+}

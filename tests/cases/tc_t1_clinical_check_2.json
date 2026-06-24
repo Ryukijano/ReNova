@@ -1,0 +1,80 @@
+{
+  "id": "tc_t1_clinical_check_2",
+  "name": "Tier 1 - Clinical Check Coverage Case 2",
+  "description": "Validates clinical_check under standard mock execution using Alzheimer's Disease.",
+  "tier": 1,
+  "milestone": "M6",
+  "feature": "clinical_check",
+  "input": {
+    "disease": "Alzheimer's Disease",
+    "args": {
+      "--output-dir": "tests/output/tc_t1_clinical_check_2",
+      "--mock": "true"
+    },
+    "env": {
+      "ADMET_MOCK_PORT": "9012"
+    },
+    "mock_profile": "alzheimers"
+  },
+  "assertions": {
+    "process": {
+      "expected_exit_code": 0,
+      "timeout_seconds": 600,
+      "stdout_contains": [
+        "Pipeline started",
+        "Pipeline finished successfully"
+      ],
+      "stderr_excludes": [
+        "Traceback (most recent call last):",
+        "AssertionError:"
+      ]
+    },
+    "outputs": [
+      {
+        "file_path": "tests/output/tc_t1_clinical_check_2/repurposing_candidate_report.csv",
+        "format": "csv",
+        "csv_rules": {
+          "required_columns": [
+            "compound_name",
+            "compound_id",
+            "smiles",
+            "target_gene",
+            "admet_score",
+            "fda_approval_status",
+            "clinical_trials_count",
+            "adverse_events_count"
+          ],
+          "min_row_count": 1,
+          "column_validators": {
+            "compound_name": {
+              "type": "string"
+            },
+            "compound_id": {
+              "type": "string"
+            },
+            "smiles": {
+              "type": "smiles"
+            },
+            "target_gene": {
+              "type": "string"
+            },
+            "admet_score": {
+              "type": "float"
+            },
+            "fda_approval_status": {
+              "type": "string"
+            },
+            "clinical_trials_count": {
+              "type": "int",
+              "min": 0
+            },
+            "adverse_events_count": {
+              "type": "int",
+              "min": 0
+            }
+          }
+        }
+      }
+    ]
+  }
+}

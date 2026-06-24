@@ -1,0 +1,72 @@
+[
+  {
+    "gene_symbol": "ATP13A2",
+    "ensembl_id": "ENSG00000159363",
+    "uniprot_id": "Q9NQ11",
+    "association_score": 0.8076,
+    "structure_path": "results/structures/Q9NQ11.pdb"
+  },
+  {
+    "gene_symbol": "LRRK2",
+    "ensembl_id": "ENSG00000188906",
+    "uniprot_id": "Q5S007",
+    "association_score": 0.7997,
+    "structure_path": "results/structures/Q5S007.pdb"
+  },
+  {
+    "gene_symbol": "SNCA",
+    "ensembl_id": "ENSG00000145335",
+    "uniprot_id": "P37840",
+    "association_score": 0.7531,
+    "structure_path": "results/structures/P37840.pdb"
+  },
+  {
+    "gene_symbol": "PLA2G6",
+    "ensembl_id": "ENSG00000184381",
+    "uniprot_id": "O60733",
+    "association_score": 0.749,
+    "structure_path": "results/structures/O60733.pdb"
+  },
+  {
+    "gene_symbol": "PARK7",
+    "ensembl_id": "ENSG00000116288",
+    "uniprot_id": "Q99497",
+    "association_score": 0.7303,
+    "structure_path": "results/structures/Q99497.pdb"
+  },
+  {
+    "gene_symbol": "FBXO7",
+    "ensembl_id": "ENSG00000100225",
+    "uniprot_id": "Q9Y3I1",
+    "association_score": 0.7241,
+    "structure_path": "results/structures/Q9Y3I1.pdb"
+  },
+  {
+    "gene_symbol": "GRIN1",
+    "ensembl_id": "ENSG00000176884",
+    "uniprot_id": "Q05586",
+    "association_score": 0.7092,
+    "structure_path": "results/structures/Q05586.pdb"
+  },
+  {
+    "gene_symbol": "MAPT",
+    "ensembl_id": "ENSG00000186868",
+    "uniprot_id": "P10636",
+    "association_score": 0.6898,
+    "structure_path": "results/structures/P10636.pdb"
+  },
+  {
+    "gene_symbol": "VPS35",
+    "ensembl_id": "ENSG00000069329",
+    "uniprot_id": "Q96QK1",
+    "association_score": 0.6792,
+    "structure_path": "results/structures/Q96QK1.pdb"
+  },
+  {
+    "gene_symbol": "COMT",
+    "ensembl_id": "ENSG00000093010",
+    "uniprot_id": "P21964",
+    "association_score": 0.6651,
+    "structure_path": "results/structures/P21964.pdb"
+  }
+]

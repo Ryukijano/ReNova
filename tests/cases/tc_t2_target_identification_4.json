@@ -1,0 +1,29 @@
+{
+  "id": "tc_t2_target_identification_4",
+  "name": "Tier 2 - Target Identification Boundary Case 4",
+  "description": "Error boundary check when the mock profile directory does not exist.",
+  "tier": 2,
+  "milestone": "M6",
+  "feature": "target_identification",
+  "input": {
+    "disease": "Cystic Fibrosis",
+    "args": {
+      "--output-dir": "tests/output/tc_t2_target_identification_4",
+      "--mock": "true"
+    },
+    "env": {
+      "ADMET_MOCK_PORT": "9024"
+    },
+    "mock_profile": "nonexistent_profile"
+  },
+  "assertions": {
+    "process": {
+      "expected_exit_code": 1,
+      "timeout_seconds": 600,
+      "stdout_contains": [
+        "Pipeline started"
+      ],
+      "stderr_excludes": []
+    }
+  }
+}

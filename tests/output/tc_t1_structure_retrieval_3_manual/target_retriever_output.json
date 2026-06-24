@@ -1,0 +1,9 @@
+[
+  {
+    "gene_symbol": "DHFR",
+    "ensembl_id": "ENSG00000228716",
+    "uniprot_id": "P00374",
+    "association_score": 0.95,
+    "structure_path": "tests/output/tc_t1_structure_retrieval_3_manual\\structures\\P00374.pdb"
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "id": "tc_t1_chem_screening_3",
+  "name": "Tier 1 - Chem Screening Coverage Case 3",
+  "description": "Validates chem_screening under standard mock execution using Malaria.",
+  "tier": 1,
+  "milestone": "M6",
+  "feature": "chem_screening",
+  "input": {
+    "disease": "Malaria",
+    "args": {
+      "--output-dir": "tests/output/tc_t1_chem_screening_3",
+      "--mock": "true"
+    },
+    "env": {
+      "ADMET_MOCK_PORT": "9013"
+    },
+    "mock_profile": "malaria"
+  },
+  "assertions": {
+    "process": {
+      "expected_exit_code": 0,
+      "timeout_seconds": 600,
+      "stdout_contains": [
+        "Pipeline started",
+        "Pipeline finished successfully"
+      ],
+      "stderr_excludes": [
+        "Traceback (most recent call last):",
+        "AssertionError:"
+      ]
+    },
+    "outputs": [
+      {
+        "file_path": "tests/output/tc_t1_chem_screening_3/chem_screen_output.csv",
+        "format": "csv",
+        "csv_rules": {
+          "required_columns": [
+            "gene_symbol",
+            "uniprot_id",
+            "compound_id",
+            "smiles",
+            "relation",
+            "value",
+            "units"
+          ],
+          "min_row_count": 1,
+          "column_validators": {
+            "gene_symbol": {
+              "type": "string"
+            },
+            "uniprot_id": {
+              "type": "string"
+            },
+            "compound_id": {
+              "type": "string"
+            },
+            "smiles": {
+              "type": "smiles"
+            },
+            "value": {
+              "type": "float",
+              "min": 0.0
+            },
+            "units": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

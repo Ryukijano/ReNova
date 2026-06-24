@@ -1,0 +1,2 @@
+gene_symbol,uniprot_id,compound_id,smiles,relation,value,units
+CFTR,P13569,CHEMBL123,CCO,=,1.2,nM

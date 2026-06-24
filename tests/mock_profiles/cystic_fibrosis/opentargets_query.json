@@ -1,0 +1,19 @@
+{
+  "data": {
+    "disease": {
+      "name": "Cystic Fibrosis",
+      "associatedTargets": {
+        "rows": [
+          {
+            "target": {
+              "approvedSymbol": "CFTR",
+              "id": "ENSG00000001626",
+              "uniprotIds": ["P13569"]
+            },
+            "score": 0.98
+          }
+        ]
+      }
+    }
+  }
+}

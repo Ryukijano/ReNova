@@ -1,0 +1,21 @@
+{
+  "data": {
+    "disease": {
+      "name": "Diabetes",
+      "associatedTargets": {
+        "rows": [
+          {
+            "target": {
+              "approvedSymbol": "INS",
+              "id": "ENSG00000254647",
+              "uniprotIds": [
+                "P01308"
+              ]
+            },
+            "score": 0.95
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+compound_name,compound_id,smiles,target_gene,admet_score,fda_approval_status,clinical_trials_count,adverse_events_count
+Mock_CHEMBL0,CHEMBL0,CCO,CFTR,0.8,APPROVED,2,5
+Mock_CHEMBL1,CHEMBL1,CCO,CFTR,0.8,APPROVED,2,5
+Mock_CHEMBL2,CHEMBL2,CCO,CFTR,0.8,APPROVED,2,5
+Mock_CHEMBL3,CHEMBL3,CCO,CFTR,0.8,APPROVED,2,5
+Mock_CHEMBL4,CHEMBL4,CCO,CFTR,0.8,APPROVED,2,5

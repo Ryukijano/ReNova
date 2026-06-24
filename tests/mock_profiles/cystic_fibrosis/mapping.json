@@ -1,0 +1,44 @@
+[
+  {
+    "path_pattern": "/graphql",
+    "method": "POST",
+    "response_file": "opentargets_query.json",
+    "content_type": "application/json"
+  },
+  {
+    "path_pattern": "/chembl/api/data/status",
+    "method": "GET",
+    "response_file": "chembl_status.json",
+    "content_type": "application/json"
+  },
+  {
+    "path_pattern": "/chembl/api/data/activity",
+    "method": "GET",
+    "response_file": "chembl_activities.json",
+    "content_type": "application/json"
+  },
+  {
+    "path_pattern": "/rest/pug/compound",
+    "method": "GET",
+    "response_file": "pubchem_compounds.json",
+    "content_type": "application/json"
+  },
+  {
+    "path_pattern": "/api/v2/studies",
+    "method": "GET",
+    "response_file": "clinicaltrials_studies.json",
+    "content_type": "application/json"
+  },
+  {
+    "path_pattern": "/drug/event.json",
+    "method": "GET",
+    "response_file": "openfda_events.json",
+    "content_type": "application/json"
+  },
+  {
+    "path_pattern": "/files/AF-.*\\.pdb",
+    "method": "GET",
+    "response_file": "dummy_structure.pdb",
+    "content_type": "text/plain"
+  }
+]

@@ -1,0 +1,11 @@
+Pipeline started
+ADMET Prediction Device: cuda
+C:\Users\kcwp264.DS\teamwork_projects\admet_repurposing_engine\tests\output\tc_t1_structure_retrieval_1_1782297747763_58804\target_retriever_output.json
+Target identification completed
+Chemical screening completed
+[ADMET] Using device: cuda
+[ADMET] Running in mock mode.
+ADMET prediction complete. Output written to: C:\Users\kcwp264.DS\teamwork_projects\admet_repurposing_engine\tests\output\tc_t1_structure_retrieval_1_1782297747763_58804\admet_predict_output.csv
+ADMET prediction completed
+Clinical checks completed
+Pipeline finished successfully

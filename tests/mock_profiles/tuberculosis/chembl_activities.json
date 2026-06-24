@@ -1,0 +1,39 @@
+{
+  "activities": [
+    {
+      "molecule_chembl_id": "CHEMBL1082",
+      "canonical_smiles": "CCN(CC)CCO",
+      "standard_relation": "=",
+      "standard_value": "4.2",
+      "standard_units": "nM"
+    },
+    {
+      "molecule_chembl_id": "CHEMBL8392",
+      "canonical_smiles": "CC1=C(C(=O)N(C1=O)C)C",
+      "standard_relation": "=",
+      "standard_value": "12.0",
+      "standard_units": "nM"
+    },
+    {
+      "molecule_chembl_id": "CHEMBL4829",
+      "canonical_smiles": "c1ccccc1NC(=O)N",
+      "standard_relation": "=",
+      "standard_value": "82.5",
+      "standard_units": "nM"
+    },
+    {
+      "molecule_chembl_id": "CHEMBL9921",
+      "canonical_smiles": "COCCN1C(=O)C2=C(C=CC=C2)N=C1C",
+      "standard_relation": "=",
+      "standard_value": "150.0",
+      "standard_units": "nM"
+    },
+    {
+      "molecule_chembl_id": "CHEMBL2291",
+      "canonical_smiles": "CCN(CC)CCOCCO",
+      "standard_relation": "=",
+      "standard_value": "5.5",
+      "standard_units": "nM"
+    }
+  ]
+}

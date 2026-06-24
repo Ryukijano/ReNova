@@ -1,0 +1,21 @@
+{
+  "data": {
+    "disease": {
+      "name": "Alzheimer's Disease",
+      "associatedTargets": {
+        "rows": [
+          {
+            "target": {
+              "approvedSymbol": "APP",
+              "id": "ENSG00000142192",
+              "uniprotIds": [
+                "P05067"
+              ]
+            },
+            "score": 0.95
+          }
+        ]
+      }
+    }
+  }
+}

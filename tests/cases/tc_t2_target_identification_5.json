@@ -1,0 +1,43 @@
+{
+  "id": "tc_t2_target_identification_5",
+  "name": "Tier 2 - Target Identification Boundary Case 5",
+  "description": "Corner case check with an extremely long disease name input.",
+  "tier": 2,
+  "milestone": "M6",
+  "feature": "target_identification",
+  "input": {
+    "disease": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "args": {
+      "--output-dir": "tests/output/tc_t2_target_identification_5",
+      "--mock": "true"
+    },
+    "env": {
+      "ADMET_MOCK_PORT": "9025"
+    },
+    "mock_profile": "empty"
+  },
+  "assertions": {
+    "process": {
+      "expected_exit_code": 0,
+      "timeout_seconds": 600,
+      "stdout_contains": [
+        "Pipeline started",
+        "Pipeline finished successfully"
+      ],
+      "stderr_excludes": [
+        "Traceback (most recent call last):",
+        "AssertionError:"
+      ]
+    },
+    "outputs": [
+      {
+        "file_path": "tests/output/tc_t2_target_identification_5/target_retriever_output.json",
+        "format": "json",
+        "json_rules": {
+          "schema_validation": true,
+          "min_items": 0
+        }
+      }
+    ]
+  }
+}

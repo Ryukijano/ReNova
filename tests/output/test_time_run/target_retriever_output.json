@@ -1,0 +1,9 @@
+[
+  {
+    "gene_symbol": "CFTR",
+    "ensembl_id": "ENSG00000001626",
+    "uniprot_id": "P13569",
+    "association_score": 0.98,
+    "structure_path": "tests/output/test_time_run\\structures\\P13569.pdb"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "id": "tc_t2_admet_prediction_2",
+  "name": "Tier 2 - Admet Prediction Boundary Case 2",
+  "description": "Error boundary check with malformed JSON mock responses.",
+  "tier": 2,
+  "milestone": "M6",
+  "feature": "admet_prediction",
+  "input": {
+    "disease": "Cystic Fibrosis",
+    "args": {
+      "--output-dir": "tests/output/tc_t2_admet_prediction_2",
+      "--mock": "true"
+    },
+    "env": {
+      "ADMET_MOCK_PORT": "9022"
+    },
+    "mock_profile": "malformed"
+  },
+  "assertions": {
+    "process": {
+      "expected_exit_code": 1,
+      "timeout_seconds": 600,
+      "stdout_contains": [
+        "Pipeline started"
+      ],
+      "stderr_excludes": []
+    }
+  }
+}

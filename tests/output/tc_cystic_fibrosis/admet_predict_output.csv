@@ -1,0 +1,2 @@
+gene_symbol,compound_id,smiles,hcl_solubility,caco2_permeability,logp,qed,toxicity_score,admet_score
+CFTR,CHEMBL123,CCO,-1.5,2.0,1.8,0.85,0.1,0.75

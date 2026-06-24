@@ -1,0 +1,9 @@
+[
+  {
+    "gene_symbol": "inhA",
+    "ensembl_id": "ENSG00000167642",
+    "uniprot_id": "P9WGR1",
+    "association_score": 0.95,
+    "structure_path": "C:\\Users\\kcwp264.DS\\teamwork_projects\\admet_repurposing_engine\\tests/output/tc_t1_admet_prediction_4_1782230872492_80488\\structures\\P9WGR1.pdb"
+  }
+]

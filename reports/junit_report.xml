@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites name="ADMET_E2E_Test_Suite" tests="72" failures="0" disabled="0" errors="0" time="652.39">
+  <testsuite name="Tier_2" tests="31" failures="0" disabled="0" errors="0" time="219.49">
+    <testcase classname="pipeline_integration" name="tc_cystic_fibrosis_mock_Cystic_Fibrosis_Mocked_E2E_Run" time="11.58"/>
+    <testcase classname="admet_prediction" name="tc_t2_admet_prediction_1_Tier_2___Admet_Prediction_Boundary_Case_1" time="10.12"/>
+    <testcase classname="admet_prediction" name="tc_t2_admet_prediction_2_Tier_2___Admet_Prediction_Boundary_Case_2" time="2.54"/>
+    <testcase classname="admet_prediction" name="tc_t2_admet_prediction_3_Tier_2___Admet_Prediction_Boundary_Case_3" time="12.27"/>
+    <testcase classname="admet_prediction" name="tc_t2_admet_prediction_4_Tier_2___Admet_Prediction_Boundary_Case_4" time="2.21"/>
+    <testcase classname="admet_prediction" name="tc_t2_admet_prediction_5_Tier_2___Admet_Prediction_Boundary_Case_5" time="9.63"/>
+    <testcase classname="chem_screening" name="tc_t2_chem_screening_1_Tier_2___Chem_Screening_Boundary_Case_1" time="9.63"/>
+    <testcase classname="chem_screening" name="tc_t2_chem_screening_2_Tier_2___Chem_Screening_Boundary_Case_2" time="2.21"/>
+    <testcase classname="chem_screening" name="tc_t2_chem_screening_3_Tier_2___Chem_Screening_Boundary_Case_3" time="10.43"/>
+    <testcase classname="chem_screening" name="tc_t2_chem_screening_4_Tier_2___Chem_Screening_Boundary_Case_4" time="2.23"/>
+    <testcase classname="chem_screening" name="tc_t2_chem_screening_5_Tier_2___Chem_Screening_Boundary_Case_5" time="9.62"/>
+    <testcase classname="clinical_check" name="tc_t2_clinical_check_1_Tier_2___Clinical_Check_Boundary_Case_1" time="9.72"/>
+    <testcase classname="clinical_check" name="tc_t2_clinical_check_2_Tier_2___Clinical_Check_Boundary_Case_2" time="2.24"/>
+    <testcase classname="clinical_check" name="tc_t2_clinical_check_3_Tier_2___Clinical_Check_Boundary_Case_3" time="10.35"/>
+    <testcase classname="clinical_check" name="tc_t2_clinical_check_4_Tier_2___Clinical_Check_Boundary_Case_4" time="2.28"/>
+    <testcase classname="clinical_check" name="tc_t2_clinical_check_5_Tier_2___Clinical_Check_Boundary_Case_5" time="9.60"/>
+    <testcase classname="pipeline_integration" name="tc_t2_pipeline_integration_1_Tier_2___Pipeline_Integration_Boundary_Case_1" time="9.67"/>
+    <testcase classname="pipeline_integration" name="tc_t2_pipeline_integration_2_Tier_2___Pipeline_Integration_Boundary_Case_2" time="2.30"/>
+    <testcase classname="pipeline_integration" name="tc_t2_pipeline_integration_3_Tier_2___Pipeline_Integration_Boundary_Case_3" time="10.18"/>
+    <testcase classname="pipeline_integration" name="tc_t2_pipeline_integration_4_Tier_2___Pipeline_Integration_Boundary_Case_4" time="2.19"/>
+    <testcase classname="pipeline_integration" name="tc_t2_pipeline_integration_5_Tier_2___Pipeline_Integration_Boundary_Case_5" time="9.63"/>
+    <testcase classname="structure_retrieval" name="tc_t2_structure_retrieval_1_Tier_2___Structure_Retrieval_Boundary_Case_1" time="9.69"/>
+    <testcase classname="structure_retrieval" name="tc_t2_structure_retrieval_2_Tier_2___Structure_Retrieval_Boundary_Case_2" time="2.29"/>
+    <testcase classname="structure_retrieval" name="tc_t2_structure_retrieval_3_Tier_2___Structure_Retrieval_Boundary_Case_3" time="10.52"/>
+    <testcase classname="structure_retrieval" name="tc_t2_structure_retrieval_4_Tier_2___Structure_Retrieval_Boundary_Case_4" time="2.24"/>
+    <testcase classname="structure_retrieval" name="tc_t2_structure_retrieval_5_Tier_2___Structure_Retrieval_Boundary_Case_5" time="9.60"/>
+    <testcase classname="target_identification" name="tc_t2_target_identification_1_Tier_2___Target_Identification_Boundary_Case_1" time="10.13"/>
+    <testcase classname="target_identification" name="tc_t2_target_identification_2_Tier_2___Target_Identification_Boundary_Case_2" time="2.23"/>
+    <testcase classname="target_identification" name="tc_t2_target_identification_3_Tier_2___Target_Identification_Boundary_Case_3" time="10.27"/>
+    <testcase classname="target_identification" name="tc_t2_target_identification_4_Tier_2___Target_Identification_Boundary_Case_4" time="2.21"/>
+    <testcase classname="target_identification" name="tc_t2_target_identification_5_Tier_2___Target_Identification_Boundary_Case_5" time="9.69"/>
+  </testsuite>
+  <testsuite name="Tier_1" tests="30" failures="0" disabled="0" errors="0" time="318.47">
+    <testcase classname="admet_prediction" name="tc_t1_admet_prediction_1_Tier_1___Admet_Prediction_Coverage_Case_1" time="10.91"/>
+    <testcase classname="admet_prediction" name="tc_t1_admet_prediction_2_Tier_1___Admet_Prediction_Coverage_Case_2" time="11.33"/>
+    <testcase classname="admet_prediction" name="tc_t1_admet_prediction_3_Tier_1___Admet_Prediction_Coverage_Case_3" time="11.44"/>
+    <testcase classname="admet_prediction" name="tc_t1_admet_prediction_4_Tier_1___Admet_Prediction_Coverage_Case_4" time="11.49"/>
+    <testcase classname="admet_prediction" name="tc_t1_admet_prediction_5_Tier_1___Admet_Prediction_Coverage_Case_5" time="10.60"/>
+    <testcase classname="chem_screening" name="tc_t1_chem_screening_1_Tier_1___Chem_Screening_Coverage_Case_1" time="10.58"/>
+    <testcase classname="chem_screening" name="tc_t1_chem_screening_2_Tier_1___Chem_Screening_Coverage_Case_2" time="10.52"/>
+    <testcase classname="chem_screening" name="tc_t1_chem_screening_3_Tier_1___Chem_Screening_Coverage_Case_3" time="10.82"/>
+    <testcase classname="chem_screening" name="tc_t1_chem_screening_4_Tier_1___Chem_Screening_Coverage_Case_4" time="10.54"/>
+    <testcase classname="chem_screening" name="tc_t1_chem_screening_5_Tier_1___Chem_Screening_Coverage_Case_5" time="10.70"/>
+    <testcase classname="clinical_check" name="tc_t1_clinical_check_1_Tier_1___Clinical_Check_Coverage_Case_1" time="10.69"/>
+    <testcase classname="clinical_check" name="tc_t1_clinical_check_2_Tier_1___Clinical_Check_Coverage_Case_2" time="10.42"/>
+    <testcase classname="clinical_check" name="tc_t1_clinical_check_3_Tier_1___Clinical_Check_Coverage_Case_3" time="10.44"/>
+    <testcase classname="clinical_check" name="tc_t1_clinical_check_4_Tier_1___Clinical_Check_Coverage_Case_4" time="10.38"/>
+    <testcase classname="clinical_check" name="tc_t1_clinical_check_5_Tier_1___Clinical_Check_Coverage_Case_5" time="10.32"/>
+    <testcase classname="pipeline_integration" name="tc_t1_pipeline_integration_1_Tier_1___Pipeline_Integration_Coverage_Case_1" time="10.49"/>
+    <testcase classname="pipeline_integration" name="tc_t1_pipeline_integration_2_Tier_1___Pipeline_Integration_Coverage_Case_2" time="10.34"/>
+    <testcase classname="pipeline_integration" name="tc_t1_pipeline_integration_3_Tier_1___Pipeline_Integration_Coverage_Case_3" time="10.38"/>
+    <testcase classname="pipeline_integration" name="tc_t1_pipeline_integration_4_Tier_1___Pipeline_Integration_Coverage_Case_4" time="11.27"/>
+    <testcase classname="pipeline_integration" name="tc_t1_pipeline_integration_5_Tier_1___Pipeline_Integration_Coverage_Case_5" time="10.47"/>
+    <testcase classname="structure_retrieval" name="tc_t1_structure_retrieval_1_Tier_1___Structure_Retrieval_Coverage_Case_1" time="10.51"/>
+    <testcase classname="structure_retrieval" name="tc_t1_structure_retrieval_2_Tier_1___Structure_Retrieval_Coverage_Case_2" time="11.13"/>
+    <testcase classname="structure_retrieval" name="tc_t1_structure_retrieval_3_Tier_1___Structure_Retrieval_Coverage_Case_3" time="10.25"/>
+    <testcase classname="structure_retrieval" name="tc_t1_structure_retrieval_4_Tier_1___Structure_Retrieval_Coverage_Case_4" time="10.14"/>
+    <testcase classname="structure_retrieval" name="tc_t1_structure_retrieval_5_Tier_1___Structure_Retrieval_Coverage_Case_5" time="10.28"/>
+    <testcase classname="target_identification" name="tc_t1_target_identification_1_Tier_1___Target_Identification_Coverage_Case_1" time="10.29"/>
+    <testcase classname="target_identification" name="tc_t1_target_identification_2_Tier_1___Target_Identification_Coverage_Case_2" time="10.54"/>
+    <testcase classname="target_identification" name="tc_t1_target_identification_3_Tier_1___Target_Identification_Coverage_Case_3" time="10.42"/>
+    <testcase classname="target_identification" name="tc_t1_target_identification_4_Tier_1___Target_Identification_Coverage_Case_4" time="10.21"/>
+    <testcase classname="target_identification" name="tc_t1_target_identification_5_Tier_1___Target_Identification_Coverage_Case_5" time="10.55"/>
+  </testsuite>
+  <testsuite name="Tier_3" tests="6" failures="0" disabled="0" errors="0" time="61.24">
+    <testcase classname="pipeline_integration" name="tc_t3_combo_1_Tier_3___Combo_Case_1__target_identification___structure_retrieval_" time="10.17"/>
+    <testcase classname="pipeline_integration" name="tc_t3_combo_2_Tier_3___Combo_Case_2__chem_screening___admet_prediction_" time="10.03"/>
+    <testcase classname="pipeline_integration" name="tc_t3_combo_3_Tier_3___Combo_Case_3__admet_prediction___clinical_check_" time="10.19"/>
+    <testcase classname="pipeline_integration" name="tc_t3_combo_4_Tier_3___Combo_Case_4__target_identification___clinical_check_" time="10.28"/>
+    <testcase classname="pipeline_integration" name="tc_t3_combo_5_Tier_3___Combo_Case_5__structure_retrieval___chem_screening_" time="10.17"/>
+    <testcase classname="pipeline_integration" name="tc_t3_combo_6_Tier_3___Combo_Case_6__chem_screening___clinical_check_" time="10.39"/>
+  </testsuite>
+  <testsuite name="Tier_4" tests="5" failures="0" disabled="0" errors="0" time="51.86">
+    <testcase classname="pipeline_integration" name="tc_t4_alzheimers_Tier_4___Real_World_Scenario__Alzheimer_s_Disease" time="10.29"/>
+    <testcase classname="pipeline_integration" name="tc_t4_cystic_fibrosis_Tier_4___Real_World_Scenario__Cystic_Fibrosis" time="10.60"/>
+    <testcase classname="pipeline_integration" name="tc_t4_diabetes_Tier_4___Real_World_Scenario__Diabetes" time="10.30"/>
+    <testcase classname="pipeline_integration" name="tc_t4_malaria_Tier_4___Real_World_Scenario__Malaria" time="10.46"/>
+    <testcase classname="pipeline_integration" name="tc_t4_tuberculosis_Tier_4___Real_World_Scenario__Tuberculosis" time="10.20"/>
+  </testsuite>
+</testsuites>
