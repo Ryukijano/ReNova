@@ -12,6 +12,8 @@
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](./LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python)](https://www.python.org/)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](./frontend)
+[![Stitches](https://img.shields.io/badge/Styled%20with-Stitches-pink?style=flat-square&logo=react)](https://stitches.dev)
+
 
 </div>
 
@@ -339,5 +341,5 @@ This project is licensed under the MIT License — see [LICENSE](./LICENSE) for 
 ---
 
 <div align="center">
-Built with ❤️ using DeepChem, RDKit, FastAPI, React, OpenTargets, ChEMBL, and Hugging Face
+Built with ❤️ using DeepChem, RDKit, FastAPI, React, Stitches, OpenTargets, ChEMBL, and Hugging Face
 </div>
