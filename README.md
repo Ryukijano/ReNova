@@ -322,9 +322,10 @@ After running against Parkinson's disease targets (SNCA, MAPT, LRRK2, GBA, PARK7
 - [x] **M7** — FastAPI backend with GPU co-existence
 - [x] **M8** — React/Vite frontend dashboard
 - [x] **M9** — GitHub Pages deployment pipeline
-- [ ] **M10** — Streaming inference results (Server-Sent Events)
-- [ ] **M11** — Compound structure visualisation (RDKit SVG)
+- [x] **M10** — 3D Target Protein Structure Visualisation (3Dmol.js)
+- [ ] **M11** — Compound structure 2D visualisation (RDKit SVG)
 - [ ] **M12** — Multi-disease batch processing
+
 
 ---
 
