@@ -42,6 +42,13 @@ def main():
     sci_torch_python = os.getenv("SCI_TORCH_PYTHON", r"C:\Users\kcwp264.DS\miniconda3\envs\sci_torch\python.exe")
     sci_chem_python = os.getenv("SCI_CHEM_PYTHON", r"C:\Users\kcwp264.DS\miniconda3\envs\sci_chem\python.exe")
     
+    # Fallback to sys.executable if running on Linux or default paths don't exist
+    if not os.path.exists(sci_torch_python):
+        sci_torch_python = sys.executable
+    if not os.path.exists(sci_chem_python):
+        sci_chem_python = sys.executable
+
+    
     # Determine if we are running in mock mode
     is_mock = (args.mock.lower() == "true") or ("ADMET_MOCK_PORT" in os.environ)
     
