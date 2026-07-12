@@ -636,10 +636,17 @@ function App() {
           </FormGroup>
 
           <ToggleContainer onClick={() => setMock(!mock)}>
+            <input
+              id="mock-checkbox"
+              type="checkbox"
+              checked={mock}
+              onChange={() => {}}
+              style={{ display: 'none' }}
+            />
             <ToggleSwitch active={mock}>
               <ToggleCircle active={mock} />
             </ToggleSwitch>
-            <Label style={{ cursor: 'pointer' }}>Use API Simulation (Mock)</Label>
+            <Label htmlFor="mock-checkbox" style={{ cursor: 'pointer' }}>Use API Simulation (Mock)</Label>
           </ToggleContainer>
 
           <SubmitButton type="submit" disabled={loading}>
